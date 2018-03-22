@@ -1,7 +1,7 @@
 # Use vinsdocker base image
 FROM joyesong/jmeter4.0-base
 MAINTAINER joyesong@qq.com
-HOST_IP=`ifconfig eth0|grep -w inet|awk '{print $2}'`
+ARG HOST_IP=`ifconfig eth0|grep -w inet|awk '{print $2}'`
 # Ports to be exposed from the container for JMeter Slaves/Server
 EXPOSE 1099 50000
 
